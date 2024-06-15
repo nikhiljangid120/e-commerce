@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Products - NJ Store</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    :root {
+      --main-text-color: #555;
+      --main-bg-color: #fff;
+      --accent-color: #ff523b;
+      --hover-color: #563434;
+      --slate-gray: #8a8a8a;
+      --light-blue: #ADD8E6;
+    }
+
+    *::selection {
+      background-color: var(--accent-color);
+      color: var(--main-bg-color);
+    }
+
+    body {
+      background: linear-gradient(to bottom right, var(--light-blue), var(--main-bg-color));
+      font-family: 'Poppins', sans-serif;
+      color: var(--main-text-color);
+    }
+
+    .col-4 img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      z-index: 1;
+      box-shadow: 0px 10px 40px rgba(244, 4, 4, 0.3);
+    }
+
+    .col-4 img:hover {
+      transform: rotateX(20deg) rotateY(20deg) translateY(-10px);
+      box-shadow: 0px 40px 80px rgba(84, 0, 239, 0.5);
+      animation: mymove 2s infinite;
+    }
+
+    @keyframes mymove {
+      from {
+        transform: translateX(0px) rotateX(20deg) rotateY(20deg);
+      }
+
+      to {
+        transform: translateX(20px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="head.png" alt="NJ Store Logo" width="125px" />
+        </a>
+      </div>
+      <nav>
+        <ul id="MenuItems">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="account.html">Account</a></li>
+        </ul>
+      </nav>
+      <a href="cart.html">
+        <img src="./assets/images/cart.png" alt="Cart" width="30px" height="30px" />
+      </a>
+      <img src="./assets/images/menu.png" alt="Menu Icon" class="menu-icon" onclick="menutoggle()" />
+    </div>
+  </div>
+
+  <div class="small-container" style="position: relative; top: -145px;">
+    <div class="row row-2">
+      <h2>All Products</h2>
+      <select name="" id="">
+        <option value="">Default Sorting</option>
+        <option value="">Sort by Price</option>
+        <option value="">Sort by Popularity</option>
+        <option value="">Sort by Rating</option>
+        <option value="">Sort by Sales</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <img data-src="./assets/img/red.png" alt="" class="lazy-load" data-aos="fade-up" />
+        <h4>Red Printed T-Shirt </h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$59.99</p>
+      </div>
+
+      <div class="col-4">
+        <img data-src="./assets/img/shoes.png" alt="" class="lazy-load" data-aos="fade-up" />
+        <h4>Sports Shoes</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <p>$129.99</p>
+      </div>
+
+      <div class="col-4">
+        <img data-src="./assets/img/headphone.png" alt="" class="lazy-load" data-aos="fade-up" />
+        <h4>Headphone</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$79.99</p>
+      </div>
+
+      <div class="col-4">
+        <img data-src="./assets/img/Denim Shirt.png" alt="" class="lazy-load" data-aos="fade-up" />
+        <h4>Nike Navy Blue Shirt</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$39.99</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <img data-src="./assets/img/printed.png" alt="" class="lazy-load" data-aos="fade-up" />
+        <h4>Printed Shirt</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$89.99</p>
+      </div>
+      <div class="col-4">
+        <img data-src="./assets/img/blazer.png" alt="" class="lazy-load" data-aos="fade-up" />
+        <h4>Formal Blazer</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$149.99</p>
+      </div>
+
+      <div class="col-4">
+        <img data-src="./assets/img/socks.png" alt="" class="lazy-load" data-aos="fade-up" />
+        <h4>Sports Socks</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <p>$99.99</p>
+      </div>
+
+      <div class="col-4">
+        <img data-src="./assets/img/watch.png" alt="" class="lazy-load" data-aos="fade-up" />
+        <h4>Smart Watch</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$69.99</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <img data-src="./assets/img/sunglass.png" alt="" class="lazy-load" data-aos="fade-up" />
+        <h4>Stylish Sunglasses</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$49.99</p>
+      </div>
+
+      <div class="col-4">
+        <img data-src="./assets/img/shorts.png" alt="" class="lazy-load" data-aos="fade-up" />
+        <h4>Boys Denim Shorts</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$159.99</p>
+      </div>
+
+      <div class="col-4">
+        <img data-src="./assets/img/belt.png" alt="" class="lazy-load" data-aos="fade-up" />
+        <h4>Leather Belt</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <p>$29.99</p>
+      </div>
+
+      <div class="col-4">
+        <img data-src="./assets/img/bag.png" alt="" class="lazy-load" data-aos="fade-up" />
+        <h4>Casual Backpack</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$79.99</p>
+      </div>
+    </div>
+
+    <div class="page-btn">
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>&#8594;</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+          <h3>Download Our App</h3>
+          <p>
+            Download App for Android <br />
+            and iOS mobile phone
+          </p>
+          <div class="app-logo">
+            <img src="./assets/images/play-store.png" alt="Play Store Logo" />
+            <img src="./assets/images/app-store.png" alt="App Store Logo" />
+          </div>
+        </div>
+        <div class="footer-col-2">
+          <img src="logo.png" alt="NJ Store Logo" />
+          <p>
+            Discover a wide range of high-quality products tailored to meet your every need. Experience excellence with NJ
+            Store.
+          </p>
+        </div>
+        <div class="footer-col-3">
+          <h3>Useful Links</h3>
+          <ul>
+            <li>Coupons</li>
+            <li>Blog Post</li>
+            <li>Return Policy</li>
+            <li>Join Affiliate</li>
+          </ul>
+        </div>
+
+        <div class="footer-col-4">
+          <h3>Follow Us</h3>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>YouTube</li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright" id="copyright-text">Copyright 2024 - NJ Store</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script src="./assets/js/toggleMenu.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      AOS.init({
+        duration: 1200,
+      });
+
+      const lazyImages = document.querySelectorAll('.lazy-load');
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove('lazy-load');
+            observer.unobserve(img);
+          }
+        });
+      });
+
+      lazyImages.forEach(img => {
+        imageObserver.observe(img);
+      });
+    });
+  </script>
+</body>
+
+</html>

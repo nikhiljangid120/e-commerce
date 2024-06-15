@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Products - NJ Store</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Robot+Slab">
+  <style>
+    :root {
+      --main-text-color: #555;
+      --main-bg-color: #fff;
+      --accent-color: #ff523b;
+      --hover-color: #563434;
+      --slate-gray: #8a8a8a;
+      --light-blue: #ADD8E6;
+    }
+
+    *::selection {
+      background-color: var(--accent-color);
+      color: var(--main-bg-color);
+    } 
+    body {
+  background: linear-gradient(to bottom right, var(--light-blue), var(--main-bg-color));
+  font-family: 'Poppins', sans-serif;
+  color: var(--main-text-color);
+  margin: 0;
+  padding: 0;
+}
+.header .container{
+  background-color: lightblue;
+}
+@media only screen and (max-width: 600px){
+  .row .col-2 img{
+    width: 20vw;
+    opacity: 0;
+  }
+  .col-2 .form-container {
+    position: relative;
+    top: 20vw;
+    left: -3vw;
+  }
+
+  .col-2 .form-container .form-btn{
+    font-family: 'Roboto Slab', serif;
+    font-size: 7vw;
+  }
+  #LoginForm a{
+    font-size: medium;
+    position: relative;
+    top: -0.1vw;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="head.png" alt="" width="125px" /></a>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>          
+        </nav>
+        <a href="cart.html"><img src="./assets/images/cart.png" alt="" width="30px" height="30px" /></a>
+        <img src="./assets/images/menu.png" alt="" class="menu-icon" onclick="menutoggle()" />
+      </div>
+    </div>
+  </div>
+
+  <div class="account-page">
+    <div class="container">
+      <div class="row">
+        <div class="col-2">
+          <img src="account.png" width="80%" />
+        </div>
+        <div class="col-2">
+          <div class="form-container">
+            <div class="form-btn">
+              <span onclick="login()">Login</span>
+              <span onclick="register()">Register</span>
+              <hr id="indicator" />
+            </div>
+            <form action="" id="LoginForm">
+              <input type="text" placeholder="Username" />
+              <input type="password" placeholder="Password" />
+
+              <button type="submit" class="btn" onclick="submit1()">Login</button>
+              <a href="">Forgot Password</a>
+            </form>
+            <form action="" id="RegForm">
+              <input type="text" placeholder="Username" />
+              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="Password" />
+              <button type="submit" class="btn" onclick="submit2()">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+          <h3>Download Our App</h3>
+          <p>
+            Get our app for the best shopping experience on Android and iOS.
+          </p>
+          <div class="app-logo">
+            <img src="./assets/images/play-store.png" alt="" />
+            <img src="./assets/images/app-store.png" alt="" />
+          </div>
+        </div>
+        <div class="footer-col-2">
+          <img src="logo.png" alt="" />
+          <p>
+            Discover a wide range of high-quality products tailored to meet your every need. Experience excellence with NJ Store.
+          </p>
+        </div>
+        <div class="footer-col-3">
+          <h3>Useful Links</h3>
+          <ul>
+            <li>Coupons</li>
+            <li>Blog Post</li>
+            <li>Return Policy</li>
+            <li>Join Affiliate</li>
+          </ul>
+        </div>
+
+        <div class="footer-col-4">
+          <h3>Follow us</h3>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>YouTube</li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright" id="copyright-text">Copyright 2024 - NJ Store</p>
+    </div>
+  </div>
+  <script src="./assets/js/account.js"></script>
+  <script src="../assets/js/toggleMenu.js"></script>
+  <script>
+    function submit1(){
+      alert("Login Successfully😄")
+    }
+
+    function submit2(){
+      alert("Login Successfully😃")
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - NJ Store</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+  <style>
+:root {
+  --main-text-color: #555;
+  --main-bg-color: #fff;
+  --accent-color: #ff523b;
+  --hover-color: #563434;
+  --slate-gray: #8a8a8a;
+  --light-blue: #ADD8E6;
+}
+
+*::selection {
+  background-color: var(--accent-color);
+  color: var(--main-bg-color);
+}
+
+
+body {
+  background: linear-gradient(to bottom right, var(--light-blue), var(--main-bg-color));
+  font-family: 'Poppins', sans-serif;
+  color: var(--main-text-color);
+}
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    .contact-page {
+      background: #fff;
+      max-width: 800px;
+      padding: 50px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      animation: fadeIn 1s ease-in-out;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .contact-page:hover {
+      box-shadow: 0 5px 10px rgba(224, 3, 3, 0.6);
+    }
+
+    .contact-page h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .contact-page p {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #666;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #333;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form button {
+      padding: 15px;
+      border-radius: 5px;
+      border: none;
+      background: #333;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #06c2e3;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+      @media (max-width: 600px) {
+  .container {
+    padding: 10px;
+    width: 95%;
+    height: auto;
+  }
+
+  .contact-page h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 28px;
+  }
+
+  .contact-page p {
+    font-family: 'Pacifico','cursive';
+    font-size: 16px;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="head.png" alt="NJ Store Logo" width="125px" /></a>
+      </div>
+      <nav>
+        <ul id="MenuItems">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="account.html">Account</a></li>
+        </ul>
+      </nav>
+      <a href="cart.html"><img src="./assets/images/cart.png" alt="Cart" width="30px" height="30px" /></a>
+      <img src="./assets/images/menu.png" alt="Menu Icon" class="menu-icon" onclick="menutoggle()" />
+    </div>
+  </div>
+
+  <!-- Contact Us Section -->
+  <div class="container contact-page">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Fill out the form below to get in touch with us.</p>
+    <form class="contact-form" action="submit_form.php" method="post">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+          <h3>Download Our App</h3>
+          <p>
+            Download App for Android <br />
+            and iOS mobile phone
+          </p>
+          <div class="app-logo">
+            <img src="./assets/images/play-store.png" alt="Play Store" />
+            <img src="./assets/images/app-store.png" alt="App Store" />
+          </div>
+        </div>
+        <div class="footer-col-2">
+          <img src="logo.png" alt="NJ Store Logo" />
+          <p>
+            Discover a wide range of high-quality products tailored to meet your every need. Experience excellence with NJ Store.
+          </p>
+        </div>
+        <div class="footer-col-3">
+          <h3>Useful Links</h3>
+          <ul>
+            <li>Coupons</li>
+            <li>Blog Post</li>
+            <li>Return Policy</li>
+            <li>Join Affiliate</li>
+          </ul>
+        </div>
+
+        <div class="footer-col-4">
+          <h3>Follow us</h3>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>YouTube</li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright" id="copyright-text">Copyright 2024 - NJ Store</p>
+    </div>
+  </div>
+  <!-- JS for Toggle menu -->
+  <script src="./assets/js/toggleMenu.js"></script>
+</body>
+
+</html>

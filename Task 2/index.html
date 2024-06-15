@@ -1,0 +1,551 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NJ Store | Athlete's Choice</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <style>
+
+.header .container{
+  background-color: lightblue;
+}
+.categories {
+  background-color: lightblue;
+  margin: 70px 0;
+  perspective: 1200px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-3 {
+  flex-basis: 30%;
+  min-width: 250px;
+  margin-bottom: 30px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.col-3 img {
+  width: 100%;
+  transition: transform 0.6s ease;
+  border-radius: 10px;
+}
+
+.col-3:hover .img-wrapper {
+  transform: rotateY(20deg) scale(0.8);  
+}
+
+.col-3 img:hover {
+  transform: scale(1.1);  
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);  
+  }
+}
+
+.col-3 {
+  animation: float 5s ease-in-out infinite;
+}
+.col-4 img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  box-shadow: 0 0 10px rgba(79, 219, 9, 0.3);
+}
+
+.col-4 img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(225, 8, 8, 0.3);
+  animation: glowing 1s infinite ease-in-out;
+}
+@keyframes glowing {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    opacity: 1.5;
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
+  }
+} 
+  .row .col-2 h1{
+    color: mediumslateblue;
+  }
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <a href="index.html">
+              <img src="head.png" alt=""/></a>
+          </div>
+          <nav>
+            <ul id="MenuItems">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="account.html">Account</a></li> 
+            </ul>
+          </nav>
+          <a href="cart.html"><img src="./assets/images/cart.png" alt="" width="30px" height="30px"/></a>
+          <img src="./assets/images/menu.png" alt="" class="menu-icon" onclick="menutoggle()"/>
+          <img src="./assets/images/cross.png" alt="" class="close-icon" onclick="toggleMenu()">
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <h1>Reach Your Goals with Every Purchase!</h1>
+            <p>
+              Discover the latest trends in workout gear to elevate your fitness routine.<br />
+              Experience comfort, quality, and style with every move you make.
+            </p>
+            <a href="" class="btn">Explore Now &#8594;</a>
+          </div>
+          <div class="col-2">
+            <img src="./assets/images/image1.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="categories">
+      <div class="small-container" >
+        <div class="row">
+          <div class="col-3">
+            <img src="./assets/images/category-1.jpg" alt="" />
+          </div>
+          <div class="col-3">
+            <img src="./assets/images/category-2.jpg" alt="" />
+          </div>
+          <div class="col-3">
+            <img src="./assets/images/category-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="small-container">
+      <h2 class="title">Featured Products</h2>
+      <div class="row">
+        <div class="col-4">
+          <a href="product-details.html">
+            <img src="./assets/img/normal.png" alt=""
+          /></a>
+          <h4>Red Colored T-shirt</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="./assets/img/tee.png" alt="" />
+          <h4>Blue Graphic Tee T-Shirt</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$45.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="./assets/img/dots.png" alt="" />
+          <h4>White Dots T-Shirt</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>$60.00</p>
+        </div>
+        <div class="col-4">
+          <img src="./assets/img/cap.png" alt="" />
+          <h4>Colored Cap</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$55.00</p>
+        </div>
+      </div>
+      <h2 class="title">Latest Products</h2>
+      <div class="row">
+        <div class="col-4">
+          <img src="./assets/img/green.jpg" alt="" />
+          <h4>Green Sports Jacket</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$80.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="./assets/img/grey.jpg" alt="" />
+          <h4>Grey Running Shoes</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$90.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="./assets/img/jeans.jpg" alt="" />
+          <h4>Blue Workout Jeans</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>$70.00</p>
+        </div>
+        <div class="col-4">
+          <img src="./assets/img/top.jpg" alt="" />
+          <h4>White Training Top</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$40.00</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <img src="./assets/img/hoodie.jpg" alt="" />
+          <h4>Red Printed Hoodie</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$75.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="./assets/img/denim_shirt.jpg" alt="" />
+          <h4>Blue Denim Jacket</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$85.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="./assets/img/yellow.jpg" alt="" />
+          <h4>Yellow Polo Shirt</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>$35.00</p>
+        </div>
+        <div class="col-4">
+          <img src="./assets/img/pyjama.jpg" alt="" />
+          <h4>Classic Blue Jeans</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$60.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="offer">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-2">
+            <div class="effect">
+              <img src="./assets/images/exclusive.png" class="offer-img" alt="" style="position: sticky; top: 6vw">
+            </div>
+          </div>
+          <div class="col-2">
+            <p style="position: relative; top: 7vw;">Exclusively available on NJ Store</p>
+            <h1 style="position: relative; top: 5vw;">Smart Band 4</h1>
+            <small style="position: relative; top: 3vw;">
+              Stay connected and monitor your health with the all-new Smart Band 4. Packed with features to keep you on track and stylish, it offers real-time heart rate monitoring, sleep tracking, and fitness tracking. With its sleek design and water-resistant build, the Smart Band 4 is perfect for any lifestyle. Elevate your health and connectivity with this essential accessory!
+            </small>
+            <a href="" class="btn" style="position: relative; top: 30px; ">Buy Now &#8594;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .offer {
+  background: radial-gradient(#e0ebf3, #08de68);
+  margin-top: 80px;
+  padding: 30px 0;
+}
+
+.col-2 .effect .offer-img {
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.col-2 .effect img {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.col-2 .effect img:hover {
+  transform: translateY(-50px) translateZ(50px) rotateX(30deg) rotateY(30deg) scale(1.1);
+}
+@media only screen and (max-width: 768px) {
+      .col-2 {
+        flex: 100%;
+        text-align: center;
+      }
+      .offer h1 {
+        font-size: 2rem;
+      }
+      .offer p {
+        font-size: 1rem;
+      }
+      .offer small {
+        font-size: 0.9rem;
+      }
+      .col-2 .effect img {
+        position: relative;
+        top: 20vw;
+        margin-bottom: 20px;
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      .offer h1 {
+        font-size: 1.8rem;
+        position: relative; 
+        top: 0;
+      }
+      .offer p {
+        font-size: 1rem;
+        position: relative; 
+        top: 0;
+      }
+      .offer small {
+        font-size: 0.8rem;
+        position: relative; 
+        top: 0;
+      }
+      .btn {
+        padding: 8px 16px;
+        position: relative; 
+        top: 0;
+      }
+      .offer-img {
+        position: relative; 
+        top: 0;
+      }
+      .col-2 {
+        padding: 10px;
+      }
+    }
+
+
+    </style>
+
+    <div class="testimonial">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-3">
+            <i class="fa fa-quote-left"></i>
+            <p>
+              The best shopping experience I've ever had! The quality of the products is exceptional and the customer service is outstanding.
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <img src="./assets/img/Sachin.jpg" alt="" />
+            <h3>Mr. Sachin Gurjar</h3>
+          </div>
+
+          <div class="col-3">
+            <i class="fa fa-quote-left"></i>
+
+            <p>
+              I'm impressed with the variety and quality of products available. The delivery was quick and the items were as described.
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <img src="./assets/img/Soyal.jpg" alt="" />
+            <h3>Mr. Soyal Islam</h3>
+          </div>
+
+          <div class="col-3">
+            <i class="fa fa-quote-left"></i>
+
+            <p>
+              Fantastic products at great prices! The website is user-friendly and the customer support team is very helpful.
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <img src="./assets/img/Govind.jpg" alt="" />
+            <h3>Mr. Govind Goyal</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="brands">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-5">
+            <img src="./assets/images/logo-godrej.png" alt="" />
+          </div>
+          <div class="col-5">
+            <img src="./assets/images/logo-oppo.png" alt="" />
+          </div>
+          <div class="col-5">
+            <img src="./assets/images/logo-paypal.png" alt="" />
+          </div>
+          <div class="col-5">
+            <img src="./assets/images/logo-philips.png" alt="" />
+          </div>
+          <div class="col-5">
+            <img src="./assets/images/logo-coca-cola.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>
+              Get our app for the best shopping experience on Android and iOS.
+            </p>
+            <div class="app-logo">
+              <img src="./assets/images/play-store.png" alt="" />
+              <img src="./assets/images/app-store.png" alt="" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="logo.png" alt="" />
+            <p>
+              Discover a wide range of high-quality products tailored to meet your every need. Experience excellence with NJ Store.
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affiliate</li>
+            </ul>
+          </div>
+
+          <div class="footer-col-4">
+            <h3>Follow us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>YouTube</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright" id="copyright-text">Copyright 2024 - NJ Store</p>
+      </div>
+    </div>
+    <script src="../assets/js/toggleMenu.js"></script>
+    <script>
+      document.querySelectorAll('.img-wrapper').forEach(wrapper => {
+        wrapper.addEventListener('mousemove', (e) => {
+          const rect = wrapper.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const midX = rect.width / 2;
+          const midY = rect.height / 2;
+          const angleY = (x - midX) / 5;  
+          const angleX = (y - midY) / 5;  
+      
+          wrapper.style.transform = `rotateY(${angleY}deg) rotateX(${-angleX}deg) scale(1.2)`;
+          wrapper.style.boxShadow = `${angleY * 30}px ${angleX * 30}px 30px rgba(1, 1, 1, 1)`; 
+        });
+        wrapper.addEventListener('mouseleave', () => {
+          wrapper.style.transform = `rotateY(0) rotateX(0) scale(1)`;
+          wrapper.style.boxShadow = `0 0 20px rgba(0, 0, 0, 0.1)`; 
+        });
+      });
+      </script>     
+  </body>
+</html>
